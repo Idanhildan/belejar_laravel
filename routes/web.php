@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,15 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// Route::get; --> Menampilkan Data
-// Route::post; --> Menambahkan Data
-// Route::put; --> Mengubah Data
-// Route::delete; --> Menghapus Data
-
-Route ::get('/home', function () {
-    return 'AKU GANTENG !!!';
-});
+Route :: get ('/home', [HomeController::class,'home']);
+Route :: get ('/about', [HomeController::class,'about']);
+Route :: get ('/contact', [HomeController::class,'contact']);
